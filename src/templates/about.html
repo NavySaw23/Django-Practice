@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1> About </h1>
+    <hr>
+    Hi my name is {{name}}, I'm {{age}}
+    <br>
+    you can normally print lists like = {{languages}}
+    <br>
+    of you can loop - 
+    <p>
+        <ul>
+            {%for i in languages%}
+                <li>{{i}}</li>
+            {%endfor%}
+        </ul>
+    </p>
+    <br>
+    you can also use if else 
+    {% if name == 'Navinya' %}
+        Hello Navinya
+    {% else %}
+        Hello someone else?
+    {% endif %}
+    <hr>
+    you can also iterate numbers
+    <ul>
+        {%for i in languages%}
+            <li>{{forloop.counter}} - {{i}}</li>
+        {%endfor%}
+    </ul>
+{% endblock body %}

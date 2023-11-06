@@ -18,12 +18,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # from pages import views 
-from pages.views import home_view, contact_view, template_view
+from pages.views import home_view, contact_view, template_view, about_view
 
 urlpatterns = [
     # path('', views.home_view, name='home'),
     path('', home_view, name='home'),
     path('contacts', contact_view, name='contacts'),
     path('template', template_view, name='template_file'),
+    path('about', about_view, name='template_file'),
+
     path('admin/', admin.site.urls),
 ]

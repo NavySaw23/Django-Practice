@@ -16,3 +16,12 @@ def contact_view(*args, **kwargs):
 def template_view(request, *args, **kwargs):
     return render(request, "template.html", {})
 
+def about_view(request, *args, **kwargs):
+    context = {
+        "name" : "Navinya",
+        "age" : 20,
+        "languages" : ['hindi','english','marathi']
+    }
+    return render(request, "about.html", context)
+
+
