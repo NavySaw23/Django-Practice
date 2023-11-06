@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {%block body%}
-    name - {{title}} <br>
-    price - {{price}} <br>
+    name - inapp: {{object.title}} <br>
+    price - {{object.price}} <br>
     desc - <font color="red"> 
-        {%if description != none%}
-            {{description}} 
+        {%if object.description != none%}
+            {{object.description}} 
         {%else%}
             No description available
         {%endif%}
