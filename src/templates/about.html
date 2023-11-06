@@ -2,10 +2,13 @@
 
 {% block body %}
     <h1> About </h1>
+    
     <hr>
     Hi my name is {{name}}, I'm {{age}}
+    
     <br>
     you can normally print lists like = {{languages}}
+    
     <br>
     of you can loop - 
     <p>
@@ -15,6 +18,7 @@
             {%endfor%}
         </ul>
     </p>
+    
     <br>
     you can also use if else 
     {% if name == 'Navinya' %}
@@ -22,6 +26,7 @@
     {% else %}
         Hello someone else?
     {% endif %}
+    
     <hr>
     you can also iterate numbers
     <ul>
@@ -29,4 +34,9 @@
             <li>{{forloop.counter}} - {{i}}</li>
         {%endfor%}
     </ul>
+
+    <hr>
+    then there are filters like uppercase
+    {{name|upper}}
+    <hr>
 {% endblock body %}
